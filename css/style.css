@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+/* font-family: "Playfair Display", serif; */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+/* font-family: "Manrope", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* font-family: "Rubik", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/* font-family: "Nunito", sans-serif; */
+
+:root {
+  --navy-blue: #0B1F3A;
+  --primary-blue: #3B72B9;
+  --light-blue: #EAF1FA;
+  --hover-yellow: #FFF90E;
+  --white: #FFFFFF;
+  --light-gray: #B8C2CC;
+  --dark-text: #142238;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+
+.navbar-brand>img {
+  height: 50px;
+}
+
+.navbar {
+  background-color: var(--navy-blue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-area .navbar {
+  background-color: transparent;
+  
+}
+
+.hero-area {
+  min-height: 100vh;
+  background-image: url(../fotot/background\ copy.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar .nav-link,
+.navbar .nav-link.active {
+  color: var(--white);
+}
+
+/* te duken emrat me te zbehta kur kalon mausin siper */
+.navbar .nav-link:hover {
+  color: var(--light-gray);
+
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    column-gap: 12px;
+  }
+   .banner .row>div:first-child {
+    padding-left: 40px;
+  }
+}
+
+/* .text-warning {
+  color: var(--hover-yellow);
+} */
+
+.search-button {
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.search-icon {
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+}
+.search-icon:hover{
+  color: var(--light-gray);
+}
+
+#searchBox input.form-control,
+#searchBox input.form-control:focus {
+  background-color: transparent;
+}
+
+#searchBox input.form-control {
+  color: white;
+}
+
+#searchBox input.form-control::placeholder {
+  color: white;
+}
+
+.navbar form .form-control {
+  border-radius: 30px;
+  width: 170px;
+  height: 38px;
+  font-size: 14px;
+}
+
+.contact-button {
+  background-color: var(--hover-yellow);
+  color: var(--dark-text);
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 6px 18px;
+  font-size: 14px;
+}
+
+.contact-button:hover {
+  background-color: transparent;
+  color: var(--light-gray);
+  border: 1px solid var(--light-gray);
+}
+
+.banner {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+.banner p.fs-6 {
+  color: var(--light-gray);
+}
+
+.book-button {
+  background-color: var(--hover-yellow);
+  color: var(--dark-text);
+  border: 1px solid var(--hover-yellow);
+  font-weight: 700;
+  padding: 10px 24px;
+}
+
+.book-button:hover {
+  background-color: transparent;
+  color: var(--light-gray);
+  border-color: var(--light-gray);
+}
+
+.shop-button {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 10px 24px;
+}
+
+.shop-button:hover {
+  /* background-color: var(--white); */
+  background-color: transparent;
+  color: var(--light-gray);
+  border-color: var(--light-gray);
+}
+
+.banner h1 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.banner p.fs-6 {
+  margin-bottom: 32px;
+}
+
+.banner .shop-button {
+  margin-left: 12px;
+}
+
+/* Responsiviteti */
+@media(max-width: 768px){
+
+}
+@media(max-width:425px){
+
+}
