@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 /* font-family: "Nunito", sans-serif; */
 
- :root {
+:root {
   --navy-blue: #0B1F3A;
   /* --primary-blue: #315F9B; */
   --primary-blue: #006199;
   --link-blue: #8ACFF8;
   --light-blue: #EAF1FA;
-  --hover-yellow: #FFF90E; 
+  --hover-yellow: #FFF90E;
   /* --yellow-text: #8A6100;  */
-   --yellow-text: #FFE566;  
+  --yellow-text: #FFE566;
   --white: #FFFFFF;
-  --gray: #64748B;          
+  --gray: #64748B;
   --light-gray: #F5F7FA;
   --dark-text: #142238;
   --background: #01112D;
@@ -33,22 +33,24 @@ body {
   background-color: var(--background);
   color: var(--white);
 }
-body > section,
-body > main {
+
+body>section,
+body>main {
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 24px;
 }
+
 @media (max-width: 767px) {
   body {
     padding: 10px;
   }
 
-  body > .hero-area,
-  body > .navbar,
-  body > main,
-  body > section,
-  body > footer {
+  body>.hero-area,
+  body>.navbar,
+  body>main,
+  body>section,
+  body>footer {
     border-radius: 16px;
   }
 }
@@ -85,6 +87,7 @@ body > main {
   position: relative;
   text-decoration: none;
 }
+
 .navbar-nav .nav-link:hover {
   color: var(--gray);
 }
@@ -231,7 +234,7 @@ body > main {
 
 /* Sherbimet faqja home */
 .featured-services {
-  padding:48px 0;
+  padding: 48px 0;
   background-color: var(--light-gray);
   border-radius: 30px 30px 0 0;
 }
@@ -243,7 +246,8 @@ body > main {
   margin-bottom: 24px;
   text-align: center;
 }
-.featured-services-heading > div{
+
+.featured-services-heading>div {
   grid-column: 2;
   text-align: center;
 }
@@ -262,7 +266,8 @@ body > main {
   font-weight: 700;
   margin-bottom: 16px;
 }
-.featured-services-heading  p:last-child {
+
+.featured-services-heading p:last-child {
   color: var(--dark-text);
   margin-bottom: 0;
 }
@@ -271,8 +276,8 @@ body > main {
   color: var(--link-blue);
   font-size: 17px;
   font-weight: 600;
-  text-decoration:none;
-   grid-column: 3;
+  text-decoration: none;
+  grid-column: 3;
   justify-self: end;
   position: static;
 }
@@ -368,7 +373,7 @@ body > main {
   margin-bottom: 16px;
 }
 
-.how-it-works-heading p:last-child{
+.how-it-works-heading p:last-child {
   color: var(--dark-text);
 }
 
@@ -390,11 +395,13 @@ body > main {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(10, 37, 64, 0.15);
 }
+
 .how-it-works .card .step-icon {
   color: var(--primary-blue);
   font-size: 28px;
   margin-bottom: 8px;
 }
+
 .how-it-works .card:hover .step-icon {
   color: var(--white);
 }
@@ -411,16 +418,16 @@ body > main {
   margin-bottom: 0;
 }
 
-body > section[class] {
+body>section[class] {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-body > section.how-it-works {
+body>section.how-it-works {
   background-color: var(--light-gray);
 }
 
-/* Portofoli në faqen Home */
+/* Portofoli ne faqen Home */
 .featured-portfolio {
   padding: 48px 0;
   background-color: var(--light-gray);
@@ -434,7 +441,7 @@ body > section.how-it-works {
   text-align: center;
 }
 
-.featured-portfolio-heading > div{
+.featured-portfolio-heading>div {
   grid-column: 2;
   text-align: center;
 }
@@ -452,7 +459,8 @@ body > section.how-it-works {
   font-weight: 700;
   margin-bottom: 16px;
 }
-.featured-portfolio-heading p:last-child{
+
+.featured-portfolio-heading p:last-child {
   color: var(--dark-text);
   margin-bottom: 16px;
 }
@@ -462,7 +470,7 @@ body > section.how-it-works {
   font-size: 17px;
   font-weight: 600;
   text-decoration: none;
-    grid-column: 3;
+  grid-column: 3;
   justify-self: end;
   position: static;
 }
@@ -517,6 +525,7 @@ body > section.how-it-works {
   font-weight: 700;
   margin-bottom: 16px;
 }
+
 .rreth-elektricistit-heading p {
   color: var(--dark-text);
   font-size: 14px;
@@ -562,9 +571,11 @@ body > section.how-it-works {
   padding-top: 48px;
   padding-bottom: 48px;
 }
-.featured-services{
+
+.featured-services {
   padding-top: 64px;
 }
+
 /* footer */
 
 .footer-logo {
@@ -628,20 +639,21 @@ body > section.how-it-works {
   font-size: 14px;
   color: #8A98AA;
 }
+
 @media (min-width: 992px) {
   .site-footer .row {
     justify-content: center;
     column-gap: 160px;
   }
 
-  .site-footer .row > div {
+  .site-footer .row>div {
     width: auto;
     flex: 0 0 auto;
     text-align: left;
   }
 }
 
-/* Shërbimet */
+/* Sherbimet */
 
 .services-page {
   padding: 48px 0;
@@ -667,11 +679,12 @@ body > section.how-it-works {
   margin-bottom: 16px;
   color: var(--primary-blue);
 }
-.services-page-heading p:last-child{
+
+.services-page-heading p:last-child {
   color: var(--dark-text);
 }
 
- .services-search {
+.services-search {
   width: 100%;
   padding: 12px 18px;
   border: 1px solid var(--gray);
@@ -703,6 +716,7 @@ body > section.how-it-works {
   border-radius: 14px;
   color: var(--dark-text);
 }
+
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--gray) 0px 4px 12px;
@@ -767,6 +781,7 @@ body > section.how-it-works {
   border-color: var(--primary-blue);
   color: var(--primary-blue);
 }
+
 .services-filters {
   display: flex;
   flex-wrap: wrap;
@@ -791,12 +806,14 @@ body > section.how-it-works {
   color: var(--white);
   border-color: var(--primary-blue);
 }
+
 .service-filter[data-category="all"] {
   background-color: var(--primary-blue);
   border-color: var(--primary-blue);
   color: var(--white);
 }
-.service-filter[data-category="all"]:hover{
+
+.service-filter[data-category="all"]:hover {
   background-color: var(--light-gray);
   border-color: var(--primary-blue);
   color: var(--primary-blue);
@@ -827,10 +844,12 @@ body > section.how-it-works {
   margin-bottom: 16px;
   color: var(--primary-blue);
 }
-.shop-page-heading p:last-child{
+
+.shop-page-heading p:last-child {
   color: var(--dark-text);
 }
- .shop-search {
+
+.shop-search {
   width: 100%;
   padding: 12px 18px;
   border: 1px solid var(--gray);
@@ -872,12 +891,14 @@ body > section.how-it-works {
   color: var(--white);
   border-color: var(--primary-blue);
 }
+
 .shop-filter[data-category="all"] {
   background-color: var(--primary-blue);
   border-color: var(--primary-blue);
   color: var(--white);
 }
-.shop-filter[data-category="all"]:hover{
+
+.shop-filter[data-category="all"]:hover {
   background-color: var(--light-gray);
   border-color: var(--primary-blue);
   color: var(--primary-blue);
@@ -897,8 +918,9 @@ body > section.how-it-works {
   background-color: var(--white);
   border-radius: 14px;
 }
-.product-card:hover{
- transform: translateY(-5px);
+
+.product-card:hover {
+  transform: translateY(-5px);
   box-shadow: var(--gray) 0px 4px 12px;
 }
 
@@ -910,7 +932,7 @@ body > section.how-it-works {
   justify-content: center;
   margin-bottom: 16px;
   border-radius: 12px;
- background-color: var(--light-blue);
+  background-color: var(--light-blue);
   color: var(--primary-blue);
   font-size: 23px;
 }
@@ -1035,6 +1057,7 @@ body > section.how-it-works {
   background-color: var(--primary-blue);
   color: var(--white);
 }
+
 .portfolio-filters .portfolio-filter[data-category="all"] {
   background-color: var(--primary-blue);
   border: 1px solid var(--primary-blue);
@@ -1046,6 +1069,7 @@ body > section.how-it-works {
   border-color: var(--primary-blue);
   color: var(--primary-blue);
 }
+
 .portfolio-project {
   height: 100%;
   padding: 24px;
@@ -1101,12 +1125,14 @@ body > section.how-it-works {
 }
 
 /* rrethnesh */
-.about-intro{
+.about-intro {
   border-radius: 20px 20px 0 0;
 }
-.about-benefits{
+
+.about-benefits {
   border-radius: 0 0 20px 20px;
 }
+
 .about-intro,
 .about-certifications,
 .about-benefits {
@@ -1115,7 +1141,7 @@ body > section.how-it-works {
 
 .about-history,
 .about-area {
-background-color: var(--white);
+  background-color: var(--white);
 }
 
 .about-intro,
@@ -1169,6 +1195,7 @@ background-color: var(--white);
 .about-map iframe {
   display: block;
 }
+
 /* Certifikimet */
 .about-cert-card {
   min-height: 145px;
@@ -1197,7 +1224,7 @@ background-color: var(--white);
   margin: 0;
 }
 
-/* Zona e shërbimit */
+/* Zona e sherbimit */
 .about-map-placeholder {
   min-height: 290px;
   padding: 24px;
@@ -1214,7 +1241,7 @@ background-color: var(--white);
   margin: 0;
 }
 
-/* Çfarë na dallon */
+/* Cfare na dallon */
 .about-benefits h2 {
   margin-bottom: 28px;
 }
@@ -1249,6 +1276,7 @@ background-color: var(--white);
   width: 100%;
   max-width: none;
 }
+
 /* kontaktoni */
 .contact-page {
   padding: 64px 0;
@@ -1275,7 +1303,7 @@ background-color: var(--white);
   margin-bottom: 0;
 }
 
-/* Dy kutitë */
+/* Dy kutite */
 .contact-form,
 .contact-info {
   height: 100%;
@@ -1315,7 +1343,7 @@ background-color: var(--white);
 .contact-send {
   width: 100%;
   padding: 12px 16px;
-  background-color:var(--hover-yellow);
+  background-color: var(--hover-yellow);
   color: var(--dark-text);
   border-radius: 30px;
   font-size: 17px;
@@ -1328,7 +1356,7 @@ background-color: var(--white);
   border-color: var(--primary-blue);
 }
 
-/* Të dhënat e kontaktit */
+/* Te dhenat e kontaktit */
 .contact-info>p {
   display: flex;
   align-items: flex-start;
@@ -1373,14 +1401,17 @@ background-color: var(--white);
   color: var(--dark-text);
   border-radius: 20px;
 }
-.configure-page a{
+
+.configure-page a {
   color: var(--link-blue);
   text-decoration: none;
 }
-.configure-page a:hover{
+
+.configure-page a:hover {
   color: var(--primary-blue);
   text-decoration: none;
 }
+
 .configure-back {
   display: inline-block;
   margin-bottom: 28px;
@@ -1420,7 +1451,7 @@ background-color: var(--white);
   margin-bottom: 0;
 }
 
-/* Zgjedhja e sasisë */
+/* Zgjedhja e sasise */
 .configure-quantity {
   padding: 30px;
   background-color: var(--white);
@@ -1446,7 +1477,7 @@ background-color: var(--white);
   color: #62676C;
 }
 
-/* Përdor strukturën quantity-picker që kemi edhe te Dyqani */
+/* Perdor strukturen quantity-picker qe kemi edhe te Dyqani */
 .configure-quantity .quantity-picker button {
   width: 52px;
   height: 52px;
@@ -1503,7 +1534,7 @@ background-color: var(--white);
   text-align: right;
 }
 
-/* Përmbledhja djathtas */
+/* Permbledhja djathtas */
 .configure-summary {
   padding: 32px;
   background-color: var(--white);
@@ -1590,7 +1621,7 @@ background-color: var(--white);
   .configure-summary {
     padding: 20px;
   }
-  
+
 
   .configure-materials-card li {
     flex-direction: column;
@@ -1602,6 +1633,7 @@ background-color: var(--white);
     text-align: left;
   }
 }
+
 .btn.configure-next {
   background-color: var(--hover-yellow);
   border-color: var(--hover-yellow);
@@ -1709,6 +1741,7 @@ background-color: var(--white);
 .navbar-cart-count {
   font-size: 12px;
 }
+
 .navbar-toggler,
 .navbar-toggler:focus {
   border: none;
@@ -1767,6 +1800,7 @@ background-color: var(--white);
   font-weight: 700;
   opacity: 1;
 }
+
 .shop-cart-checkout:hover {
   background-color: var(--white);
   border-color: var(--primary-blue);
@@ -1860,9 +1894,10 @@ background-color: var(--white);
 .featured-portfolio .card {
   height: 100%;
 }
+
 /* Responsiviteti */
 @media (max-width: 575px) {
-  .navbar-brand > img {
+  .navbar-brand>img {
     height: 40px;
   }
 
@@ -1885,6 +1920,7 @@ background-color: var(--white);
     margin-top: 12px;
   }
 }
+
 @media (max-width: 991px) {
   .navbar .navbar-collapse {
     padding-top: 16px;
@@ -1904,6 +1940,7 @@ background-color: var(--white);
     margin-top: 8px;
   }
 }
+
 @media (max-width: 991px) {
   .navbar-search-results {
     left: 50%;
@@ -1915,6 +1952,7 @@ background-color: var(--white);
     text-align: left;
   }
 }
+
 @media (max-width: 575px) {
   .featured-services-heading {
     display: flex;
@@ -1923,7 +1961,7 @@ background-color: var(--white);
     gap: 16px;
   }
 
-  .featured-services-heading > div {
+  .featured-services-heading>div {
     width: 100%;
   }
 
@@ -1931,12 +1969,13 @@ background-color: var(--white);
     font-size: 28px;
   }
 
-  .featured-services-heading > a {
+  .featured-services-heading>a {
     position: static;
     align-self: center;
     white-space: nowrap;
   }
 }
+
 @media (max-width: 575px) {
   .featured-portfolio-heading {
     display: flex;
@@ -1946,7 +1985,7 @@ background-color: var(--white);
     gap: 16px;
   }
 
-  .featured-portfolio-heading > div {
+  .featured-portfolio-heading>div {
     width: 100%;
   }
 
@@ -1954,23 +1993,26 @@ background-color: var(--white);
     font-size: 28px;
   }
 
-  .featured-portfolio-heading > a {
+  .featured-portfolio-heading>a {
     position: static;
     align-self: center;
     white-space: nowrap;
   }
 }
+
 @media (max-width: 575px) {
   .how-it-works-heading h2 {
     font-size: 28px;
   }
 }
+
 @media (max-width: 575px) {
   .rreth-elektricistit h2 {
     font-size: 28px;
     line-height: 1.2;
   }
 }
+
 @media (max-width: 575px) {
   .footer-bottom {
     padding: 12px 40px 48px;
@@ -1983,6 +2025,7 @@ background-color: var(--white);
     line-height: 1.5;
   }
 }
+
 @media (max-width: 575px) {
   .banner h1 {
     font-size: 1.9rem;
@@ -1997,6 +2040,7 @@ background-color: var(--white);
     margin-bottom: 24px;
   }
 }
+
 @media (max-width: 575px) {
   .featured-portfolio {
     padding-top: 24px;
@@ -2006,6 +2050,7 @@ background-color: var(--white);
     margin-top: 0;
   }
 }
+
 @media (max-width: 575px) {
   .services-page-heading h1 {
     font-size: 28px;
@@ -2028,6 +2073,7 @@ background-color: var(--white);
     padding: 8px 12px;
   }
 }
+
 @media (max-width: 575px) {
   .shop-page-heading h1 {
     font-size: 28px;
@@ -2050,6 +2096,7 @@ background-color: var(--white);
     padding: 8px 12px;
   }
 }
+
 @media (max-width: 575px) {
   .portfolio-page-heading h1 {
     font-size: 28px;
@@ -2067,7 +2114,9 @@ background-color: var(--white);
     padding: 8px 12px;
   }
 }
+
 @media (max-width: 575px) {
+
   .about-intro,
   .about-history,
   .about-area,
@@ -2102,6 +2151,7 @@ background-color: var(--white);
     height: 280px;
   }
 }
+
 @media (min-width: 576px) and (max-width: 991px) {
   .banner p.fs-6 {
     color: #B8C2CC;
@@ -2113,7 +2163,9 @@ background-color: var(--white);
     display: none;
   }
 }
+
 @media (min-width: 576px) and (max-width: 991px) {
+
   .featured-services-heading,
   .featured-portfolio-heading {
     display: flex;
@@ -2123,18 +2175,19 @@ background-color: var(--white);
     gap: 16px;
   }
 
-  .featured-services-heading > div,
-  .featured-portfolio-heading > div {
+  .featured-services-heading>div,
+  .featured-portfolio-heading>div {
     width: 100%;
   }
 
-  .featured-services-heading > a,
-  .featured-portfolio-heading > a {
+  .featured-services-heading>a,
+  .featured-portfolio-heading>a {
     position: static;
     align-self: center;
     white-space: nowrap;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .how-it-works .row {
     justify-content: center;
@@ -2145,6 +2198,7 @@ background-color: var(--white);
     min-height: 220px;
   }
 }
+
 @media (min-width: 576px) and (max-width: 991px) {
   .rreth-elektricistit img {
     display: block;
@@ -2152,6 +2206,7 @@ background-color: var(--white);
     margin-right: auto;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .site-footer {
     padding-top: 40px;
@@ -2161,7 +2216,7 @@ background-color: var(--white);
     row-gap: 32px;
   }
 
-  .site-footer .row > div {
+  .site-footer .row>div {
     text-align: left;
   }
 
@@ -2169,13 +2224,15 @@ background-color: var(--white);
     margin-top: 28px;
   }
 }
+
 @media (max-width: 991px) {
-  .navbar .navbar-nav > li:last-child {
+  .navbar .navbar-nav>li:last-child {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
+
 @media (max-width: 991px) {
   .navbar .nav-item:has(.navbar-cart-button) {
     justify-content: center;
@@ -2187,17 +2244,19 @@ background-color: var(--white);
     margin-right: 0;
   }
 }
+
 @media (max-width: 575px) {
   .banner {
     padding-top: 100px;
   }
 }
+
 @media (max-width: 575px) {
   .banner {
     min-height: calc(100vh - 90px);
     min-height: calc(100svh - 90px);
     align-items: flex-end;
-    padding: 0 0 28vh;   
+    padding: 0 0 28vh;
   }
 
   .banner p br {

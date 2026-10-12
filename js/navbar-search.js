@@ -8,7 +8,7 @@
   const results = wrapper.querySelector("#navbar-search-results");
 
   const entries = [
-    // Shërbimet
+    // Sherbimet
     {
       name: "Instalim Prizë e Re",
       type: "Shërbim",
@@ -105,7 +105,7 @@
     const query = normalize(input.value);
     results.replaceChildren();
 
-    // Kur hapet search-i bosh, shfaq të gjitha
+    // Kur hapet search-i bosh, shfaq te gjitha
     const matches = entries.filter(entry =>
       normalize(entry.name).includes(query)
     );
@@ -145,7 +145,7 @@
     results.hidden = true;
   });
 
-  // Enter hap rezultatin e parë
+  // Enter hap rezultatin e pare
   form.addEventListener("submit", event => {
     event.preventDefault();
 
@@ -156,7 +156,7 @@
     }
   });
 
-  // Klikimi jashtë dhe Escape mbyllin kërkimin
+  // Klikimi jashte dhe Escape mbyllin kerkimin
   function closeSearch() {
     results.hidden = true;
     bootstrap.Collapse.getOrCreateInstance(

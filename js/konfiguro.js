@@ -1,5 +1,5 @@
-// Vlera provë për shërbimet.
-// Çmimet e materialeve përputhen me çmimet e Dyqanit.
+// Vlera prove per sherbimet.
+// Cmimet e materialeve perputhen me cmimet e Dyqanit.
 const services = {
   prize: {
     title: "Instalim Prizë e Re",
@@ -93,7 +93,7 @@ const services = {
   }
 };
 
-// Lexon shërbimin nga adresa e faqes
+// Lexon sherbimin nga adresa e faqes
 const params = new URLSearchParams(window.location.search);
 const serviceKey = params.get("sherbimi");
 
@@ -113,7 +113,7 @@ const summaryList = document.querySelector(".configure-summary-list");
 const totalElement = document.querySelector(".configure-total");
 const durationElement = document.querySelector("#duration-text");
 
-// Vendos titullin, përshkrimin dhe ikonën e shërbimit
+// Vendos titullin, pershkrimin dhe ikonen e sherbimit
 document.querySelector(".configure-heading h1").textContent = service.title;
 document.querySelector(".configure-heading p").textContent = service.description;
 
@@ -131,12 +131,12 @@ plusButton.setAttribute("aria-label", "Rrit sasinë");
 quantityInput.step = "1";
 quantityInput.max = "50";
 
-// Formatimi i çmimeve
+// Formatimi i cmimeve
 function formatPrice(value) {
   return `${value.toLocaleString("en-US")} lekë`;
 }
 
-// Sasia duhet të jetë numër i plotë, nga 1 deri në MAX_QUANTITY
+// Sasia duhet te jete numer i plote, nga 1 deri në MAX_QUANTITY
 const MAX_QUANTITY = 50;
 
 function getQuantity() {
@@ -151,7 +151,7 @@ function updateTotal() {
   const quantity = getQuantity();
   let materialsTotal = 0;
 
-  // Pastron listat përpara se t'i krijojë përsëri
+  // Pastron listat perpara se ti krijoje perseri
   materialsList.replaceChildren();
   summaryList.replaceChildren();
 
@@ -160,7 +160,7 @@ function updateTotal() {
     const cost = amount * material.price;
     materialsTotal += cost;
 
-    // Rreshti i materialit në listën majtas
+    // Rreshti i materialit ne listen majtas
     const row = document.createElement("li");
     const name = document.createElement("span");
     const details = document.createElement("span");
@@ -175,7 +175,7 @@ function updateTotal() {
     row.append(name, details);
     materialsList.append(row);
 
-    // Rreshti i materialit në përmbledhjen djathtas
+    // Rreshti i materialit ne permbledhjen djathtas
     const summaryRow = document.createElement("li");
     const summaryName = document.createElement("span");
     const summaryAmount = document.createElement("span");
@@ -187,7 +187,7 @@ function updateTotal() {
     summaryList.append(summaryRow);
   });
 
-  // Shton çmimin e punës
+  // Shton cmimin e punes
   const laborCost = service.labor * quantity;
   const laborRow = document.createElement("li");
   const laborName = document.createElement("span");
@@ -201,7 +201,7 @@ function updateTotal() {
 
   totalElement.textContent = formatPrice(materialsTotal + laborCost);
 
-  // Përditëson kohëzgjatjen
+  // Perditeson kohezgjatjen
   const totalMinutes = service.minutes * quantity;
   const hours = Math.floor(totalMinutes / 60);
   const minutes = totalMinutes % 60;
@@ -247,6 +247,6 @@ nextButton.addEventListener("click", () => {
   try {
     sessionStorage.setItem("serviceRequest", JSON.stringify(request));
   } catch {
-    // Faqja vazhdon edhe nëse ruajtja nuk lejohet
+    // Faqja vazhdon edhe nese ruajtja nuk lejohet
   }
 });

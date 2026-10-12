@@ -1,4 +1,4 @@
-// ===== KËRKIMI DHE KATEGORITË =====
+// ===== KERKIMI DHE KATEGORITE =====
 
 const productSearch = document.querySelector("#product-search");
 const shopFilters = document.querySelectorAll(".shop-filter");
@@ -57,7 +57,7 @@ shopFilters.forEach(button => {
 filterProducts();
 
 
-// ===== FUNKSIONE NDIHMËSE =====
+// ===== FUNKSIONE NDIHMESE =====
 
 function formatPrice(value) {
   return `${value.toLocaleString("en-US")} lekë`;
@@ -76,7 +76,7 @@ function getQuantity(input) {
 
 // ===== PRODUKTET =====
 
-// Lexon emrin dhe çmimin nga çdo kartë
+// Lexon emrin dhe cmimin nga cdo karte
 const products = Array.from(shopItems, (item, index) => ({
   id: index,
   name: item.querySelector("h2").textContent.trim(),
@@ -98,7 +98,7 @@ const cartElement = document.querySelector("#shopCart");
 
 let cart = [];
 
-// Lexon shportën e ruajtur dhe kontrollon të dhënat
+// Lexon shporten e ruajtur dhe kontrollon te dhenat
 try {
   const savedCart = JSON.parse(localStorage.getItem("shopCart"));
 
@@ -136,7 +136,7 @@ function saveCart() {
   try {
     localStorage.setItem("shopCart", JSON.stringify(cart));
   } catch {
-    // Shporta vazhdon të punojë nëse ruajtja nuk lejohet
+    // Shporta vazhdon te punoje nese ruajtja nuk lejohet
   }
 }
 
@@ -197,7 +197,7 @@ function renderCart() {
 }
 
 
-// ===== SASIA DHE SHTIMI NË SHPORTË =====
+// ===== SASIA DHE SHTIMI NE SHPORTE =====
 
 shopItems.forEach((item, index) => {
   const picker = item.querySelector(".quantity-picker");
@@ -243,7 +243,7 @@ shopItems.forEach((item, index) => {
 });
 
 
-// ===== PËRFUNDIMI I POROSISË =====
+// ===== PERFUNDIMI I POROSISE =====
 
 checkoutButton.addEventListener("click", () => {
   if (cart.length === 0) return;
@@ -255,7 +255,7 @@ checkoutButton.addEventListener("click", () => {
 });
 
 
-// Shfaq shportën kur hapet faqja
+// Shfaq shporten kur hapet faqja
 renderCart();
 
 shopItems.forEach((item, index) => {

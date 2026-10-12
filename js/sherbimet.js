@@ -4,7 +4,7 @@ const serviceItems = document.querySelectorAll(".service-item");
 
 let selectedCategory = "all";
 
-// Lejon kërkimin edhe pa ë ose ç
+// Lejon kerkimin edhe pa ë ose ç
 function normalizeText(text) {
   return text
     .toLowerCase()
@@ -13,7 +13,7 @@ function normalizeText(text) {
     .trim();
 }
 
-// Shfaq kartat që përputhen me kërkimin dhe kategorinë
+// Shfaq kartat qe perputhen me kerkimin dhe kategorine
 function filterServices() {
   const searchText = normalizeText(searchInput.value);
 
@@ -34,10 +34,10 @@ function filterServices() {
   });
 }
 
-// Përditëson rezultatet sa herë shkruan
+// Perditeson rezultatet sa here shkruan
 searchInput.addEventListener("input", filterServices);
 
-// Ndryshon kategorinë dhe butonin aktiv
+// Ndryshon kategorine dhe butonin aktiv
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     selectedCategory = button.dataset.category;

@@ -27,7 +27,7 @@ function validateContact() {
   );
 }
 
-// Përditëson kontrollin gjatë shkrimit
+// Perditeson kontrollin gjate shkrimit
 [nameInput, phoneInput, messageInput].forEach(input => {
   input.addEventListener("input", () => {
     validateContact();

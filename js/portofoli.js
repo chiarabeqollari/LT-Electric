@@ -10,7 +10,7 @@ portfolioFilters.forEach(button => {
   button.addEventListener("click", () => {
     const category = button.dataset.category;
 
-    // Shënon kategorinë e zgjedhur
+    // Shenon kategorine e zgjedhur
     portfolioFilters.forEach(filter => {
       const isActive = filter === button;
 
@@ -18,7 +18,7 @@ portfolioFilters.forEach(button => {
       filter.setAttribute("aria-pressed", String(isActive));
     });
 
-    // Shfaq punimet e kategorisë përkatëse
+    // Shfaq punimet e kategorise perkatese
     portfolioItems.forEach(item => {
       const matches =
         category === "all" ||

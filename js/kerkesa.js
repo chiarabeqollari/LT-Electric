@@ -4,7 +4,7 @@ const requestMessage = document.querySelector("#request-message");
 const phoneInput = document.querySelector("#request-phone");
 const dateInput = document.querySelector("#request-date");
 
-// Lexon kërkesën e ruajtur nga faqja Konfiguro
+// Lexon kerkesen e ruajtur nga faqja Konfiguro
 let request = null;
 
 try {
@@ -34,7 +34,7 @@ if (request) {
   summary.textContent = "Nuk ke zgjedhur ende një shërbim.";
 }
 
-// Data e preferuar nuk mund të jetë në të kaluarën
+// Data e preferuar nuk mund te jete ne te kaluaren
 const today = new Date();
 today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
 dateInput.min = today.toISOString().split("T")[0];
