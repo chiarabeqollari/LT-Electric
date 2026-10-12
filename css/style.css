@@ -2192,3 +2192,15 @@ background-color: var(--white);
     padding-top: 100px;
   }
 }
+@media (max-width: 575px) {
+  .banner {
+    min-height: calc(100vh - 90px);
+    min-height: calc(100svh - 90px);
+    align-items: flex-end;
+    padding: 0 0 28vh;   
+  }
+
+  .banner p br {
+    display: none;
+  }
+}
