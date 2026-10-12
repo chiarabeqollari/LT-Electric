@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Njihuni me LT Electric – përvojë në instalime elektrike për shtëpi dhe biznese në Berat.">
     <title>Rreth nesh - LT Electric</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="fotot/favicon.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,19 +24,19 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="fotot/LT Electric Logo - 2 - Edited copy.png"
-                    alt="logo"></a>
+                    alt="LT Electric"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Hap menunë">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Kreu</a>
+                        <a class="nav-link" href="index.html">Kreu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sherbimet.html">Sherbimet</a>
+                        <a class="nav-link" href="sherbimet.html">Shërbimet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="dyqani.html">Dyqani</a>
@@ -42,32 +45,230 @@
                         <a class="nav-link" href="portofoli.html">Portofoli</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rrethnesh.html">Rreth nesh</a>
+                        <a class="nav-link active" aria-current="page" href="rrethnesh.html">Rreth nesh</a>
                     </li>
-                    <div class="d-flex align-items-center">
-                        <div class="collapse" id="searchBox">
-                            <form role="search">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+                    <li class="nav-item">
+    <div class="navbar-search d-flex align-items-center">
+        <div class="collapse" id="searchBox">
+            <form role="search" id="navbar-search-form">
+                <input class="form-control"
+                       id="navbar-search-input"
+                       type="search"
+                       placeholder="Kërko..."
+                       aria-label="Kërko produkte dhe shërbime"
+                       autocomplete="off">
+            </form>
 
-                        <button class="search-icon" type="button" data-bs-toggle="collapse" data-bs-target="#searchBox"
-                            aria-expanded="false" aria-controls="searchBox" aria-label="Hap kërkimin">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                    </div>
+            <div id="navbar-search-results"
+                 class="navbar-search-results" hidden></div>
+        </div>
+
+        <button class="search-icon" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#searchBox"
+                aria-expanded="false"
+                aria-controls="searchBox"
+                aria-label="Hap kërkimin">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</li>
+
+<li class="nav-item">
+    <a href="kontakti.html" class="btn contact-button">
+        Kontaktoni
+    </a>
+</li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fund Navbar -->
+    <main>
+        <!-- Hyrja -->
+        <section class="about-intro">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-3">
+                        <img src="fotot/elektricisti.png" alt="Elektricist në punë" class="about-intro-image">
+                    </div>
+
+                    <div class="col-12 col-lg-9">
+                        <p class="about-eyebrow">RRETH ELEKTRICISTIT</p>
+                        <h1>LT Electric</h1>
+                        <p class="about-description">
+                            Ofrojmë instalime elektrike për shtëpi dhe biznese, nga riparimet e vogla deri te instalimet
+                            e plota. Kujdesemi për vendosjen e prizave, ndriçimit, kamerave të sigurisë dhe tablove
+                            elektrike, sipas nevojave të çdo ambienti.
+                            Me LT Electric, mund të llogaritësh paraprakisht çmimin dhe kohëzgjatjen e përafërt të
+                            shërbimit, që të planifikosh punën më lehtë.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historia -->
+        <section class="about-history">
+            <div class="container">
+                <p class="about-eyebrow">HISTORIA / EKSPERIENCA</p>
+                <h2>Vite përvojë në terren</h2>
+                <p class="about-description">
+                    LT Electric nisi nga puna në terren dhe dëshira për të ofruar shërbime elektrike të kujdesshme për
+                    shtëpi dhe biznese. Me kalimin e kohës, përvoja jonë është zgjeruar nga riparimet dhe ndërhyrjet e
+                    vogla te instalimet e plota, ndriçimi dhe sistemet e kamerave të sigurisë. <br>
+                    Gjatë kësaj rruge, kemi punuar në ambiente me kërkesa të ndryshme, duke përshtatur çdo instalim me
+                    hapësirën dhe mënyrën si përdoret. Çdo projekt na ka ndihmuar të zhvillojmë aftësitë tona, të
+                    përmirësojmë organizimin e punës dhe të kuptojmë më mirë rëndësinë e detajeve.
+                    <br>Sot, këtë përvojë e sjellim në çdo shërbim që ofrojmë. Nga kontrolli fillestar dhe zgjedhja e
+                    materialeve deri te montimi dhe provat përfundimtare, i kushtojmë vëmendje sigurisë dhe
+                    funksionalitetit. Synojmë të ndërtojmë marrëdhënie afatgjata me klientët, përmes komunikimit të
+                    qartë dhe kujdesit për punën që na besojnë.
+                </p>
+            </div>
+        </section>
+
+        <!-- Certifikimet -->
+        <!-- <section class="about-certifications">
+        <div class="container">
+            <p class="about-eyebrow">CERTIFIKIME</p>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="about-cert-card">
+                        <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        <h3>Certifikimi 1</h3>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="about-cert-card">
+                        <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        <h3>Certifikimi 2</h3>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="about-cert-card">
+                        <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        <h3>Certifikimi 3</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+        <!-- Zona e shërbimit -->
+        <section class="about-area">
+            <div class="container">
+                <p class="about-eyebrow">VENDNDODHJA JONË</p>
+                <h2>Ku ndodhemi</h2>
+
+                <div class="about-map">
+                    <iframe src="https://maps.google.com/maps?q=Berat%2C%20Albania&output=embed" title="Harta e Beratit"
+                        width="100%" height="350" style="border: 0;" loading="lazy" allowfullscreen>
+                    </iframe>
+            </div>
+            </div>
+        </section>
+
+        <!-- Çfarë na dallon -->
+        <section class="about-benefits">
+            <div class="container">
+                <p class="about-eyebrow">PSE LT ELECTRIC</p>
+                <h2>Çfarë na dallon</h2>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="about-benefit-card">
+                            <h3>Çmim transparent</h3>
+                            <p>E sheh koston para se të na kontaktosh.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="about-benefit-card">
+                            <h3>Kohë e qartë</h3>
+                            <p>Sheh kohëzgjatjen e parashikuar për çdo punë.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="about-benefit-card">
+                            <h3>Materiale cilësore</h3>
+                            <p>Zgjedhim materiale të përshtatshme për çdo instalim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  <!-- Nis Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="fotot/LT Electric Logo - 2 - Edited copy.png" alt="LT Electric" class="footer-logo">
+                    <p>Instalime elektrike për shtëpi dhe biznese.</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Lidhje të shpejta</h3>
+                    <ul>
+                        <li><a href="sherbimet.html">Shërbimet</a></li>
+                        <li><a href="dyqani.html">Dyqani</a></li>
+                        <li><a href="portofoli.html">Portofoli</a></li>
+                        <li><a href="rrethnesh.html">Rreth nesh</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Na kontaktoni</h3>
+                    <ul>
+                        <li><a href="tel:+355692891254">+355 69 289 1254</a></li>
+                        <li><a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a></li>
+                        <li>Berat, Shqipëri</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3>Rrjete sociale</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram i LT Electric">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook i LT Electric">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok i LT Electric">
+                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LT Electric. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fund Footer -->
+        <button type="button" id="back-to-top" aria-label="Kthehu në fillim">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script src="js/navbar-search.js"></script>
+        <script src="js/back-to-top.js"></script>
 </body>
 
 </html>

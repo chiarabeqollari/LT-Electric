@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Punë të realizuara nga LT Electric për shtëpi, biznese dhe ndriçim.">
     <title>Portofoli - LT Electric</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="fotot/favicon.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,53 +24,237 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="fotot/LT Electric Logo - 2 - Edited copy.png"
-                    alt="logo"></a>
+                    alt="LT Electric"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Hap menunë">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Kreu</a>
+                        <a class="nav-link" href="index.html">Kreu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sherbimet.html">Sherbimet</a>
+                        <a class="nav-link" href="sherbimet.html">Shërbimet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="dyqani.html">Dyqani</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="portofoli.html">Portofoli</a>
+                        <a class="nav-link active" aria-current="page" href="portofoli.html">Portofoli</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="rrethnesh.html">Rreth nesh</a>
                     </li>
-                    <div class="d-flex align-items-center">
-                        <div class="collapse" id="searchBox">
-                            <form role="search">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+                    <li class="nav-item">
+    <div class="navbar-search d-flex align-items-center">
+        <div class="collapse" id="searchBox">
+            <form role="search" id="navbar-search-form">
+                <input class="form-control"
+                       id="navbar-search-input"
+                       type="search"
+                       placeholder="Kërko..."
+                       aria-label="Kërko produkte dhe shërbime"
+                       autocomplete="off">
+            </form>
 
-                        <button class="search-icon" type="button" data-bs-toggle="collapse" data-bs-target="#searchBox"
-                            aria-expanded="false" aria-controls="searchBox" aria-label="Hap kërkimin">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                    </div>
+            <div id="navbar-search-results"
+                 class="navbar-search-results" hidden></div>
+        </div>
+
+        <button class="search-icon" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#searchBox"
+                aria-expanded="false"
+                aria-controls="searchBox"
+                aria-label="Hap kërkimin">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</li>
+
+<li class="nav-item">
+    <a href="kontakti.html" class="btn contact-button">
+        Kontaktoni
+    </a>
+</li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fund Navbar -->
+    <main>
+        <section class="portfolio-page">
+            <div class="container">
+                <div class="portfolio-page-heading">
+                    <p>PORTOFOLI</p>
+                    <h1>Punë të realizuara</h1>
+                </div>
+
+                <!-- fillim kategorite-->
+                <div class="portfolio-filters" role="group" aria-label="Kategoritë e punëve">
+    <button type="button" class="portfolio-filter active"
+            data-category="all">Të gjitha</button>
+
+    <button type="button" class="portfolio-filter"
+            data-category="shtepi">Shtëpi</button>
+
+    <button type="button" class="portfolio-filter"
+            data-category="biznese">Biznese</button>
+
+    <button type="button" class="portfolio-filter"
+            data-category="ndricim">Ndriçim</button>
+</div>
+                <!-- fund kategorite -->
+                <!-- fillim punimet -->
+                <div class="row g-4 portfolio-grid">
+
+                    <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="shtepi">
+                        <article class="portfolio-project">
+                            <div class="portfolio-images">
+                                <img src="fotot/apartamentpara.png" alt="Instalimi i apartamentit para punimeve">
+                                <img src="fotot/apartament.png" alt="Instalimi i apartamentit pas punimeve">
+                            </div>
+                            <span class="portfolio-badge">Para / Pas</span>
+                            <h2>Instalim i plotë — apartament 85m²</h2>
+                            <p>Rikonstruksion i plotë i instalimit elektrik, tabllo e re dhe 40+ pika.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="biznese">
+                        <article class="portfolio-project">
+                            <div class="portfolio-images">
+                                <img src="fotot/kamerapara.png" alt="Dyqani para instalimit të kamerave">
+                                <img src="fotot/kamera.png" alt="Dyqani pas instalimit të kamerave">
+                            </div>
+                            <span class="portfolio-badge">Para / Pas</span>
+                            <h2>Sistem kamerash — dyqan qendror</h2>
+                            <p>6 kamera sigurie me lidhje në regjistrues dhe telefon.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="ndricim">
+                        <article class="portfolio-project">
+                            <div class="portfolio-images">
+                                <img src="fotot/kuzhinapara.png" alt="Kuzhina para instalimit të ndriçimit">
+                                <img src="fotot/kuzhine.png" alt="Kuzhina pas instalimit të ndriçimit">
+                            </div>
+                            <span class="portfolio-badge">Para / Pas</span>
+                            <h2>Ndriçim modern — kuzhinë + ambient dite</h2>
+                            <p>Spote LED të ngulitura dhe shirit LED nën dollapë.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="biznese">
+                        <article class="portfolio-project">
+                            <div class="portfolio-images">
+                                <img src="fotot/tabllopara.png" alt="Tablloja elektrike e zyrës para punimeve">
+                                <img src="fotot/tabllo.png" alt="Tablloja elektrike e zyrës pas punimeve">
+                            </div>
+                            <span class="portfolio-badge">Para / Pas</span>
+                            <h2>Tabllo + automatë — zyrë 120m²</h2>
+                            <p>Ndërrim i plotë i tabllos me mbrojtje diferenciale.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="shtepi">
+                        <article class="portfolio-project">
+                            <div class="portfolio-images">
+                                <img src="fotot/prizapara.png" alt="Apartamenti para instalimit të prizave">
+                                <img src="fotot/priza.png" alt="Apartamenti pas instalimit të prizave">
+                            </div>
+                            <span class="portfolio-badge">Para / Pas</span>
+                            <h2>Instalim prizash — apartament 2+1</h2>
+                            <p>12 priza të reja në të gjitha dhomat.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="ndricim">
+                        <article class="portfolio-project">
+                            <div class="portfolio-images">
+                                <img src="fotot/oborrpara.png" alt="Oborri para instalimit të ndriçimit">
+                                <img src="fotot/oborr.png" alt="Oborri pas instalimit të ndriçimit">
+                            </div>
+                            <span class="portfolio-badge">Para / Pas</span>
+                            <h2>Ndriçim jashtë — oborr privat</h2>
+                            <p>Ndriçim rrugice me sensor lëvizjeje.</p>
+                        </article>
+                    </div>
+
+                </div>
+                <!-- fund punimet -->
+
+            </div>
+        </section>
+    </main>
+     <!-- Nis Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="fotot/LT Electric Logo - 2 - Edited copy.png" alt="LT Electric" class="footer-logo">
+                    <p>Instalime elektrike për shtëpi dhe biznese.</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Lidhje të shpejta</h3>
+                    <ul>
+                        <li><a href="sherbimet.html">Shërbimet</a></li>
+                        <li><a href="dyqani.html">Dyqani</a></li>
+                        <li><a href="portofoli.html">Portofoli</a></li>
+                        <li><a href="rrethnesh.html">Rreth nesh</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Na kontaktoni</h3>
+                    <ul>
+                        <li><a href="tel:+355692891254">+355 69 289 1254</a></li>
+                        <li><a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a></li>
+                        <li>Berat, Shqipëri</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3>Rrjete sociale</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram i LT Electric">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook i LT Electric">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok i LT Electric">
+                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LT Electric. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fund Footer -->
+        <button type="button" id="back-to-top" aria-label="Kthehu në fillim">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script src="js/portofoli.js"></script>
+        <script src="js/navbar-search.js"></script>
+        <script src="js/back-to-top.js"></script>
 </body>
 
 </html>

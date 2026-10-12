@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sherbimet - LT Electric</title>
+    <meta name="description" content="Shërbimet e LT Electric: priza, çelësa, ndriçim, kamera sigurie, tabllo elektrike dhe instalime të plota.">
+    <title>Shërbimet - LT Electric</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="fotot/favicon.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,19 +24,19 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="fotot/LT Electric Logo - 2 - Edited copy.png"
-                    alt="logo"></a>
+                    alt="LT Electric"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Hap menunë">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Kreu</a>
+                        <a class="nav-link" href="index.html">Kreu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sherbimet.html">Sherbimet</a>
+                        <a class="nav-link active" aria-current="page" href="sherbimet.html">Shërbimet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="dyqani.html">Dyqani</a>
@@ -44,31 +47,232 @@
                     <li class="nav-item">
                         <a class="nav-link" href="rrethnesh.html">Rreth nesh</a>
                     </li>
-                    <div class="d-flex align-items-center">
-                        <div class="collapse" id="searchBox">
-                            <form role="search">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+                  <li class="nav-item">
+    <div class="navbar-search d-flex align-items-center">
+        <div class="collapse" id="searchBox">
+            <form role="search" id="navbar-search-form">
+                <input class="form-control"
+                       id="navbar-search-input"
+                       type="search"
+                       placeholder="Kërko..."
+                       aria-label="Kërko produkte dhe shërbime"
+                       autocomplete="off">
+            </form>
 
-                        <button class="search-icon" type="button" data-bs-toggle="collapse" data-bs-target="#searchBox"
-                            aria-expanded="false" aria-controls="searchBox" aria-label="Hap kërkimin">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                    </div>
+            <div id="navbar-search-results"
+                 class="navbar-search-results" hidden></div>
+        </div>
+
+        <button class="search-icon" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#searchBox"
+                aria-expanded="false"
+                aria-controls="searchBox"
+                aria-label="Hap kërkimin">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</li>
+
+<li class="nav-item">
+    <a href="kontakti.html" class="btn contact-button">
+        Kontaktoni
+    </a>
+</li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fund Navbar -->
+    <main>
+        <section class="services-page">
+            <div class="container">
+                <div class="services-page-heading">
+                    <p>SHËRBIMET</p>
+                    <h1>Zgjidh shërbimin tënd</h1>
+                    <p>Zgjidh shërbimin që të duhet dhe llogarit çmimin e kohëzgjatjen përpara se të na kontaktosh.</p>
+                </div>
 
+                <!-- fillim search bar-->
+                <label for="service-search" class="visually-hidden">Kërko një shërbim</label>
+                <input type="search" id="service-search" class="form-control services-search"
+                    placeholder="Kërko një shërbim (p.sh. prizë, kamera, ndriçim...)">
+                <!-- fund search bar-->
+                <!-- fillim kategorit -->
+                <div class="services-filters" role="group" aria-label="Kategoritë e shërbimeve">
+                    <button type="button" class="service-filter active" data-category="all">Të gjitha</button>
+                    <button type="button" class="service-filter" data-category="vogla">Instalime të vogla</button>
+                    <button type="button" class="service-filter" data-category="ndricim">Ndriçim</button>
+                    <button type="button" class="service-filter" data-category="kamera">Kamera</button>
+                    <button type="button" class="service-filter" data-category="medha">Instalime të mëdha</button>
+                </div>
+                <!-- fund kategorit -->
+                <!-- fillim sherbimet -->
+                <div class="row g-4 services-grid">
+
+                    <div class="col-12 col-md-6 col-lg-4 service-item" data-category="vogla">
+                        <article class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-plug" aria-hidden="true"></i>
+                            </div>
+                            <h2>Instalim Prizë e Re</h2>
+                            <p>Shtim ose zëvendësim prize në një ambient ekzistues, përfshirë kabllim dhe kanal.</p>
+                            <div class="service-card-details">
+                                <strong>nga 2,910 lekë</strong>
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> nga 1 orë 10 min</span>
+                            </div>
+                            <a href="konfiguro.html?sherbimi=prize" class="btn service-configure-btn">Konfiguro Shërbimin</a>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 service-item" data-category="vogla">
+                        <article class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-toggle-on" aria-hidden="true"></i>
+                            </div>
+                            <h2>Instalim Çelës Drite</h2>
+                            <p>Vendosje ose ndërrim çelësi ndriçimi, i thjeshtë ose i dyfishtë.</p>
+                            <div class="service-card-details">
+                                <strong>nga 2,340 lekë</strong>
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> nga 1 orë</span>
+                            </div>
+                            <a href="konfiguro.html?sherbimi=celes" class="btn service-configure-btn">Konfiguro Shërbimin</a>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 service-item" data-category="kamera">
+                        <article class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                            </div>
+                            <h2>Vendosje Kamera Sigurie</h2>
+                            <p>Instalim kamerash sigurie me kabllim dhe lidhje në rrjet ose regjistrues.</p>
+                            <div class="service-card-details">
+                                <strong>nga 8,800 lekë</strong>
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> nga 1 orë 45 min</span>
+                            </div>
+                            <a href="konfiguro.html?sherbimi=kamera" class="btn service-configure-btn">Konfiguro Shërbimin</a>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 service-item" data-category="ndricim">
+                        <article class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            </div>
+                            <h2>Instalim Ndriçimi (spote/llambadarë)</h2>
+                            <p>Vendosje pikash ndriçimi: spote LED, llambadarë ose ndriçim dekorativ.</p>
+                            <div class="service-card-details">
+                                <strong>nga 2,660 lekë</strong>
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> nga 55 min</span>
+                            </div>
+                            <a href="konfiguro.html?sherbimi=ndricim" class="btn service-configure-btn">Konfiguro Shërbimin</a>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 service-item" data-category="medha">
+                        <article class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                            </div>
+                            <h2>Ndërrim / Instalim Tabllo Elektrike</h2>
+                            <p>Instalim tablloje të re me automatë dhe mbrojtje diferenciale, sipas standardit.</p>
+                            <div class="service-card-details">
+                                <strong>nga 10,500 lekë</strong>
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> nga 2 orë 20 min</span>
+                            </div>
+                            <a href="konfiguro.html?sherbimi=tabllo" class="btn service-configure-btn">Konfiguro Shërbimin</a>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 service-item" data-category="medha">
+                        <article class="service-card">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                            </div>
+                            <h2>Instalim i Plotë Elektrik (ambient i ri)</h2>
+                            <p>Instalim i plotë për shtëpi, zyrë, dyqan ose magazinë, nga tablloja deri te çdo pikë.</p>
+                            <div class="service-card-details">
+                                <strong>nga 22,300 lekë</strong>
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> nga 4 orë 35 min</span>
+                            </div>
+                            <a href="konfiguro.html?sherbimi=instalim" class="btn service-configure-btn">Konfiguro Shërbimin</a>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- fund sherbimet -->
+        </section>
+    </main>
+    <!-- Nis Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="fotot/LT Electric Logo - 2 - Edited copy.png" alt="LT Electric" class="footer-logo">
+                    <p>Instalime elektrike për shtëpi dhe biznese.</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Lidhje të shpejta</h3>
+                    <ul>
+                        <li><a href="sherbimet.html">Shërbimet</a></li>
+                        <li><a href="dyqani.html">Dyqani</a></li>
+                        <li><a href="portofoli.html">Portofoli</a></li>
+                        <li><a href="rrethnesh.html">Rreth nesh</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Na kontaktoni</h3>
+                    <ul>
+                        <li><a href="tel:+355692891254">+355 69 289 1254</a></li>
+                        <li><a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a></li>
+                        <li>Berat, Shqipëri</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3>Rrjete sociale</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram i LT Electric">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook i LT Electric">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok i LT Electric">
+                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LT Electric. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fund Footer -->
+         <button type="button" id="back-to-top" aria-label="Kthehu në fillim">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="js/sherbimet.js"></script>
+    <script src="js/navbar-search.js"></script>
+    <script src="js/back-to-top.js"></script>
 </body>
 
 </html>

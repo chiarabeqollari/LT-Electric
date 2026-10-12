@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LT Electric – instalime elektrike për shtëpi dhe biznese në Berat. Zgjidh shërbimin dhe merr menjëherë çmimin dhe kohëzgjatjen.">
     <title>LT Electric - Instalime dhe Materiale Elektrike</title>
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="fotot/favicon.png">
+    <link rel="icon" type="image/png" href="fotot/favicon.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -24,10 +25,10 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html"><img src="fotot/LT Electric Logo - 2 - Edited copy.png"
-                        alt="logo"></a>
+                        alt="LT Electric"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Hap menunë">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -36,7 +37,7 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Kreu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sherbimet.html">Sherbimet</a>
+                            <a class="nav-link" href="sherbimet.html">Shërbimet</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="dyqani.html">Dyqani</a>
@@ -48,40 +49,27 @@
                             <a class="nav-link" href="rrethnesh.html">Rreth nesh</a>
                         </li>
                         <li class="nav-item">
-                            <div class="d-flex align-items-center">
-                            <div class="collapse" id="searchBox">
-                                <form role="search">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                </form>
-                            </div>
+                            <div class="navbar-search d-flex align-items-center">
+                                <div class="collapse" id="searchBox">
+                                    <form role="search" id="navbar-search-form">
+                                        <input class="form-control" id="navbar-search-input" type="search"
+                                            placeholder="Kërko..." aria-label="Kërko produkte dhe shërbime"
+                                            autocomplete="off">
+                                    </form>
 
-                            <button class="search-icon" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#searchBox" aria-expanded="false" aria-controls="searchBox"
-                                aria-label="Hap kërkimin">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </div>
-                    
+                                    <div id="navbar-search-results" class="navbar-search-results" hidden></div>
+                                </div>
+
+                                <button class="search-icon" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#searchBox" aria-expanded="false" aria-controls="searchBox"
+                                    aria-label="Hap kërkimin">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
                         </li>
-                      <li class="nav-item">
-                        <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                      </li>
-                        <!-- <div class="d-flex align-items-center">
-                            <div class="collapse" id="searchBox">
-                                <form role="search">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                </form>
-                            </div>
-
-                            <button class="search-icon" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#searchBox" aria-expanded="false" aria-controls="searchBox"
-                                aria-label="Hap kërkimin">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </div> -->
-                        <!-- <div class="d-flex align-items-center gap-3">
+                        <li class="nav-item">
                             <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                        </div> -->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -97,7 +85,7 @@
                         <p class="fs-6">LT Electric bën instalime elektrike nga më të voglat <br> deri te instalimet e
                             plota. <br>Zgjidh shërbimin, jep sasitë, dhe merr çmimin total e <br> kohëzgjatjen
                             menjëherë.</p>
-                        <a href="sherbimet.html" class="btn book-button">Gjej Sherbimin tend</a>
+                        <a href="sherbimet.html" class="btn book-button">Gjej shërbimin tënd</a>
                         <a href="dyqani.html" class="btn shop-button">Shiko Dyqanin</a>
                     </div>
                     <!-- <div class="col-12 col-lg-6">
@@ -105,13 +93,262 @@
                 </div> -->
                 </div>
             </div>
-            </section>
+        </section>
     </div>
     <!-- Fund Banner -->
+    <!-- Nis Seksioni Sherbimet -->
+    <section class="featured-services">
+        <div class="container">
+            <div class="featured-services-heading">
+                <div>
+                    <p>SHËRBIMET MË TË KËRKUARA</p>
+                    <h2>Për çfarë ke nevojë?</h2>
+                    <p>Zgjidh shërbimin që të duhet dhe llogarit çmimin e kohëzgjatjen përpara se të na kontaktosh.</p>
+                </div>
+                <a href="sherbimet.html">Shiko të gjitha →</a>
+            </div>
+            <div class="row g-4">
+                <!-- col-12 => ne ekranet e vogla te se gjithe hapesires -->
+                <!-- col-md-6 => ne tablet colona vijne 2 n2 nje rresht dhe 2 te tjera ne rresht tjeter -->
+                <!-- col-lg-3 => ne ekranet e madhe 4 kolona ne rresht -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-plug" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">Instalim Prizë e Re</h3>
+                            <p class="card-text">nga 2,910 lekë</p>
+                            <a href="konfiguro.html?sherbimi=prize" class="btn service-button">Konfiguro</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-toggle-on" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">Instalim Çelës Drite</h3>
+                            <p class="card-text">nga 2,340 lekë</p>
+                            <a href="konfiguro.html?sherbimi=celes" class="btn service-button">Konfiguro</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-video" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">Vendosje Kamera Sigurie</h3>
+                            <p class="card-text">nga 8,800 lekë</p>
+                            <a href="konfiguro.html?sherbimi=kamera" class="btn service-button">Konfiguro</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="card-title">Instalim Ndriçimi</h3>
+                            <p class="card-text">nga 2,660 lekë</p>
+                            <a href="konfiguro.html?sherbimi=ndricim" class="btn service-button">Konfiguro</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Fund Seksioni Sherbimet -->
+    <!-- Nis Portofoli -->
+    <section class="featured-portfolio">
+        <div class="container">
+            <div class="featured-portfolio-heading">
+                <div>
+                    <p>PORTOFOLI</p>
+                    <h2>Punë të realizuara</h2>
+                    <p>Shiko disa nga instalimet elektrike që kemi realizuar për shtëpi dhe biznese.</p>
+                </div>
+                <a href="portofoli.html">Shiko të gjitha →</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="fotot/portofoli1.png" class="card-img-top" alt="Instalim elektrik i plotë në një apartament">
+                        <div class="card-body">
+                            <h3 class="card-title">Instalim i plotë — apartament 85m²</h3>
+                            <p class="card-text">Rikonstruksion i plotë i instalimit elektrik, tabllo e re dhe 40+
+                                pika.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="fotot/portofoli2.png" class="card-img-top" alt="Sistem kamerash sigurie në një dyqan">
+                        <div class="card-body">
+                            <h3 class="card-title">Sistem kamerash — dyqan qendror</h3>
+                            <p class="card-text">6 kamera sigurie me lidhje në regjistrues dhe telefon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="fotot/portofoli3.png" class="card-img-top" alt="Ndriçim LED modern në kuzhinë">
+                        <div class="card-body">
+                            <h3 class="card-title">Ndriçim modern — kuzhinë + ambient dite</h3>
+                            <p class="card-text">Spote LED të ngulitura dhe shirit LED nën dollapë.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fund Portofoli -->
+    <!-- Nis Seksioni Funksionon -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-it-works-heading">
+                <div>
+                    <p>SI FUNKSIONON</p>
+                    <h2>3 hapa, çmimi menjëherë</h2>
+                    <p>Nga zgjedhja e shërbimit te çmimi përfundimtar: tre hapa të thjeshtë për të ditur sa kushton dhe
+                        sa zgjat puna.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="step-icon">
+                                <i class="fa-solid fa-list-ul"></i>
+                            </div>
+
+                            <h3 class="card-title">Zgjidh shërbimin</h3>
+                            <p class="card-text">Shfleto listën e shërbimeve që ofrojmë dhe zgjidh atë që të duhet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="step-icon">
+                                <i class="fa-solid fa-ruler-combined"></i>
+                            </div>
+                            <h3 class="card-title">Jep sasitë</h3>
+                            <p class="card-text">Trego sa copë, sa metra ose sa m² ka puna jote.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="step-icon">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+
+                            <h3 class="card-title">Merr çmim + kohë</h3>
+                            <p class="card-text">Lista e materialeve, çmimi total dhe kohëzgjatja menjëherë.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fund Seksioni Funksionon -->
+    <!-- Nis Rreth elektricistit -->
+    <section class="rreth-elektricistit">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-3">
+                    <img src="fotot/elektricisti.png" class="electrician-image" alt="Elektricist në punë">
+                </div>
+
+                <div class="col-12 col-lg-9">
+                    <div class="rreth-elektricistit-heading">
+                        <p>RRETH ELEKTRICISTIT</p>
+                        <h2>Përvojë e vërtetuar, punë e garantuar</h2>
+                        <p>Ofrojmë instalime elektrike për shtëpi dhe biznese, nga riparimet e vogla deri te instalimet
+                            e plota. Kujdesemi për vendosjen e prizave, ndriçimit, kamerave të sigurisë dhe tablove
+                            elektrike, sipas nevojave të çdo ambienti. </p>
+                        <a href="rrethnesh.html" class="btn about-button">Rreth Nesh →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fund Rreth elektricistit -->
+    <!-- Nis Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="fotot/LT Electric Logo - 2 - Edited copy.png" alt="LT Electric" class="footer-logo">
+                    <p>Instalime elektrike për shtëpi dhe biznese.</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Lidhje të shpejta</h3>
+                    <ul>
+                        <li><a href="sherbimet.html">Shërbimet</a></li>
+                        <li><a href="dyqani.html">Dyqani</a></li>
+                        <li><a href="portofoli.html">Portofoli</a></li>
+                        <li><a href="rrethnesh.html">Rreth nesh</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Na kontaktoni</h3>
+                    <ul>
+                        <li><a href="tel:+355692891254">+355 69 289 1254</a></li>
+                        <li><a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a></li>
+                        <li>Berat, Shqipëri</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3>Rrjete sociale</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram i LT Electric">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Facebook i LT Electric">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok i LT Electric">
+                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LT Electric. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fund Footer -->
+    <button type="button" id="back-to-top" aria-label="Kthehu në fillim">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="js/navbar-search.js"></script>
+     <script src="js/back-to-top.js"></script>
 </body>
 
 </html>

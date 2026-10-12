@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dyqani i LT Electric: kabllo, priza, çelësa, llamba, kamera dhe automatë.">
     <title>Dyqani - LT Electric</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="fotot/favicon.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,22 +24,22 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="fotot/LT Electric Logo - 2 - Edited copy.png"
-                    alt="logo"></a>
+                    alt="LT Electric"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Hap menunë">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Kreu</a>
+                        <a class="nav-link" href="index.html">Kreu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sherbimet.html">Sherbimet</a>
+                        <a class="nav-link" href="sherbimet.html">Shërbimet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dyqani.html">Dyqani</a>
+                        <a class="nav-link active" aria-current="page" href="dyqani.html">Dyqani</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="portofoli.html">Portofoli</a>
@@ -44,30 +47,340 @@
                     <li class="nav-item">
                         <a class="nav-link" href="rrethnesh.html">Rreth nesh</a>
                     </li>
-                    <div class="d-flex align-items-center">
-                        <div class="collapse" id="searchBox">
-                            <form role="search">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+                    <li class="nav-item">
+                        <div class="navbar-search d-flex align-items-center">
+                            <div class="collapse" id="searchBox">
+                                <form role="search" id="navbar-search-form">
+                                    <input class="form-control" id="navbar-search-input" type="search"
+                                        placeholder="Kërko..." aria-label="Kërko produkte dhe shërbime"
+                                        autocomplete="off">
+                                </form>
 
-                        <button class="search-icon" type="button" data-bs-toggle="collapse" data-bs-target="#searchBox"
-                            aria-expanded="false" aria-controls="searchBox" aria-label="Hap kërkimin">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                                <div id="navbar-search-results" class="navbar-search-results" hidden></div>
+                            </div>
+
+                            <button class="search-icon" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#searchBox" aria-expanded="false" aria-controls="searchBox"
+                                aria-label="Hap kërkimin">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="kontakti.html" class="btn contact-button">
+                            Kontaktoni
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button class="btn navbar-cart-button" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#shopCart" aria-controls="shopCart">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                            Shporta <span id="cart-count" class="navbar-cart-count">0</span>
                         </button>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                    </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fund Navbar -->
+    <main>
+        <section class="shop-page">
+            <div class="container">
+                <div class="shop-page-heading">
+                    <p>DYQANI</p>
+                    <h1>Materiale elektrike</h1>
+                    <p>Gjej materialet elektrike që të duhen, zgjidh sasinë dhe shtoji në shportë.</p>
+                </div>
+
+                <!-- fillim search bar -->
+                <label for="product-search" class="visually-hidden">Kërko një produkt</label>
+                <input type="search" id="product-search" class="form-control shop-search"
+                    placeholder="Kërko një produkt (p.sh. kabllo, kamera, llambë...)">
+                <!-- fund search bar -->
+                <!-- fillim kategorit -->
+                <div class="shop-filters" role="group" aria-label="Kategoritë e produkteve">
+                    <button type="button" class="shop-filter active" data-category="all">Të gjitha</button>
+                    <button type="button" class="shop-filter" data-category="kabllo">Kabllo</button>
+                    <button type="button" class="shop-filter" data-category="priza-celesa">Priza &amp; Çelësa</button>
+                    <button type="button" class="shop-filter" data-category="llamba">Llamba</button>
+                    <button type="button" class="shop-filter" data-category="kamera">Kamera</button>
+                    <button type="button" class="shop-filter" data-category="automate">Automatë</button>
+                </div>
+                <!-- fund kategorit -->
+                <!-- fillim produktet -->
+                <div class="row g-4 shop-grid">
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="kabllo">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+                            <h2>Kabllo 3×2.5mm²</h2>
+                            <p>çmimi / m</p>
+                            <strong class="product-price">150 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e kabllos 3×2.5">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e kabllos 3×2.5">
+                                    <button type="button" aria-label="Rrit sasinë e kabllos 3×2.5">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="kabllo">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+                            <h2>Kabllo 3×1.5mm²</h2>
+                            <p>çmimi / m</p>
+                            <strong class="product-price">120 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e kabllos 3×1.5">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e kabllos 3×1.5">
+                                    <button type="button" aria-label="Rrit sasinë e kabllos 3×1.5">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="priza-celesa">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+                            <h2>Prizë standarde</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">600 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e prizave">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e prizave">
+                                    <button type="button" aria-label="Rrit sasinë e prizave">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="priza-celesa">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-toggle-on" aria-hidden="true"></i></div>
+                            <h2>Çelës drite i thjeshtë</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">550 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e çelësave">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e çelësave">
+                                    <button type="button" aria-label="Rrit sasinë e çelësave">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="llamba">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+                            <h2>Llambë LED 9W</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">400 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e llambave LED">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e llambave LED">
+                                    <button type="button" aria-label="Rrit sasinë e llambave LED">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="llamba">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></div>
+                            <h2>Llambadar LED i rrumbullakët</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">1,200 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e llambadarëve">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e llambadarëve">
+                                    <button type="button" aria-label="Rrit sasinë e llambadarëve">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="kamera">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-camera" aria-hidden="true"></i></div>
+                            <h2>Kamera sigurie WiFi</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">6,500 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e kamerave">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e kamerave">
+                                    <button type="button" aria-label="Rrit sasinë e kamerave">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="automate">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+                            <h2>Automat 16A</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">350 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e automatëve 16A">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e automatëve 16A">
+                                    <button type="button" aria-label="Rrit sasinë e automatëve 16A">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="automate">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                            <h2>Automat diferencial 25A</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">1,500 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e automatëve diferencialë">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e automatëve diferencialë">
+                                    <button type="button" aria-label="Rrit sasinë e automatëve diferencialë">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3 shop-item" data-category="kabllo">
+                        <article class="product-card">
+                            <div class="product-icon"><i class="fa-solid fa-ruler" aria-hidden="true"></i></div>
+                            <h2>Kanal kabllosh PVC</h2>
+                            <p>çmimi / copë</p>
+                            <strong class="product-price">300 lekë</strong>
+                            <div class="product-actions">
+                                <div class="quantity-picker">
+                                    <button type="button" aria-label="Ul sasinë e kanaleve të kabllove">−</button>
+                                    <input type="number" min="1" max="999" value="1" aria-label="Sasia e kanaleve të kabllove">
+                                    <button type="button" aria-label="Rrit sasinë e kanaleve të kabllove">+</button>
+                                </div>
+                                <button type="button" class="btn add-to-cart">+ Shporta</button>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+                <!-- fund produktet -->
+            </div>
+        </section>
+    </main>
+    <!-- Nis Shporta -->
+    <div class="offcanvas offcanvas-end shop-cart" tabindex="-1" id="shopCart" aria-labelledby="shopCartTitle">
+
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="shopCartTitle">Shporta e Materialeve</h2>
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Mbyll shportën"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div class="shop-cart-items">
+                <p>Shporta është bosh.</p>
+            </div>
+        </div>
+
+        <div class="shop-cart-footer">
+            <div class="shop-cart-total">
+                <strong>Totali</strong>
+                <strong>0 lekë</strong>
+            </div>
+
+            <button type="button" class="btn shop-cart-checkout" disabled>
+                Përfundo Porosinë
+            </button>
+        </div>
+    </div>
+    <!-- Fund Shporta -->
+    <!-- Nis Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="fotot/LT Electric Logo - 2 - Edited copy.png" alt="LT Electric" class="footer-logo">
+                    <p>Instalime elektrike për shtëpi dhe biznese.</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Lidhje të shpejta</h3>
+                    <ul>
+                        <li><a href="sherbimet.html">Shërbimet</a></li>
+                        <li><a href="dyqani.html">Dyqani</a></li>
+                        <li><a href="portofoli.html">Portofoli</a></li>
+                        <li><a href="rrethnesh.html">Rreth nesh</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Na kontaktoni</h3>
+                    <ul>
+                        <li><a href="tel:+355692891254">+355 69 289 1254</a></li>
+                        <li><a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a></li>
+                        <li>Berat, Shqipëri</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3>Rrjete sociale</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram i LT Electric">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Facebook i LT Electric">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok i LT Electric">
+                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LT Electric. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fund Footer -->
+    <button type="button" id="back-to-top" aria-label="Kthehu në fillim">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="js/dyqani.js"></script>
+    <script src="js/navbar-search.js"></script>
+    <script src="js/back-to-top.js"></script>
 </body>
 
 </html>

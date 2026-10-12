@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktoni LT Electric për instalime elektrike në Berat: telefon, email dhe formular kontakti.">
     <title>Kontakti - LT Electric</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="fotot/favicon.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,19 +24,19 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="fotot/LT Electric Logo - 2 - Edited copy.png"
-                    alt="logo"></a>
+                    alt="LT Electric"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Hap menunë">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Kreu</a>
+                        <a class="nav-link" href="index.html">Kreu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sherbimet.html">Sherbimet</a>
+                        <a class="nav-link" href="sherbimet.html">Shërbimet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="dyqani.html">Dyqani</a>
@@ -44,30 +47,197 @@
                     <li class="nav-item">
                         <a class="nav-link" href="rrethnesh.html">Rreth nesh</a>
                     </li>
-                    <div class="d-flex align-items-center">
-                        <div class="collapse" id="searchBox">
-                            <form role="search">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+                    <li class="nav-item">
+    <div class="navbar-search d-flex align-items-center">
+        <div class="collapse" id="searchBox">
+            <form role="search" id="navbar-search-form">
+                <input class="form-control"
+                       id="navbar-search-input"
+                       type="search"
+                       placeholder="Kërko..."
+                       aria-label="Kërko produkte dhe shërbime"
+                       autocomplete="off">
+            </form>
 
-                        <button class="search-icon" type="button" data-bs-toggle="collapse" data-bs-target="#searchBox"
-                            aria-expanded="false" aria-controls="searchBox" aria-label="Hap kërkimin">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="kontakti.html" class="btn contact-button">Kontaktoni</a>
-                    </div>
+            <div id="navbar-search-results"
+                 class="navbar-search-results" hidden></div>
+        </div>
+
+        <button class="search-icon" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#searchBox"
+                aria-expanded="false"
+                aria-controls="searchBox"
+                aria-label="Hap kërkimin">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</li>
+
+<li class="nav-item">
+    <a href="kontakti.html" class="btn contact-button">
+        Kontaktoni
+    </a>
+</li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fund Navbar -->
+    <main>
+        <section class="contact-page">
+            <div class="container">
+                <div class="contact-heading">
+                    <p>KONTAKTI</p>
+                    <h1>Na kontakto</h1>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Formulari -->
+                    <div class="col-12 col-lg-7">
+                        <form class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="contact-name">Emri</label>
+                                    <input type="text" id="contact-name" name="name" class="form-control"
+                                        placeholder="Emri" required>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="contact-phone">Telefoni</label>
+                                    <input type="tel" id="contact-phone" name="phone" class="form-control"
+                                        placeholder="Numri i telefonit" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="contact-message">Mesazhi</label>
+                                    <textarea id="contact-message" name="message" class="form-control" rows="6"
+                                        placeholder="Si mund të të ndihmojmë?" required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn contact-send">
+                                        Dërgo Mesazhin
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <p id="contact-feedback" class="mt-3" role="status"></p>
+                    </div>
+
+                    <!-- Të dhënat e kontaktit -->
+                    <div class="col-12 col-lg-5">
+                        <div class="contact-info">
+                            <p>
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <span><strong>Telefon:</strong>
+                                    <a href="tel:+355692891254">069 289 1254</a>
+                                </span>
+                            </p>
+
+                            <p>
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                <span><strong>Email:</strong>
+                                    <a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a>
+                                </span>
+                            </p>
+
+                            <p>
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <span><strong>Vendndodhja:</strong> Berat, Shqipëri</span>
+                            </p>
+
+                            <p>
+                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                <span><strong>Orari:</strong> Hën–Sht, 08:00–18:00</span>
+                            </p>
+
+                            <div class="contact-socials">
+                                <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    Instagram
+                                </a>
+
+                                <a href="https://www.facebook.com/EMRI_I_FAQES/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  <!-- Nis Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img src="fotot/LT Electric Logo - 2 - Edited copy.png" alt="LT Electric" class="footer-logo">
+                    <p>Instalime elektrike për shtëpi dhe biznese.</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Lidhje të shpejta</h3>
+                    <ul>
+                        <li><a href="sherbimet.html">Shërbimet</a></li>
+                        <li><a href="dyqani.html">Dyqani</a></li>
+                        <li><a href="portofoli.html">Portofoli</a></li>
+                        <li><a href="rrethnesh.html">Rreth nesh</a></li>
+                        <li><a href="kontakti.html">Kontakti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h3>Na kontaktoni</h3>
+                    <ul>
+                        <li><a href="tel:+355692891254">+355 69 289 1254</a></li>
+                        <li><a href="mailto:ltelectric00@gmail.com">ltelectric00@gmail.com</a></li>
+                        <li>Berat, Shqipëri</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3>Rrjete sociale</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/latielectric.al/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram i LT Electric">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook i LT Electric">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok i LT Electric">
+                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LT Electric. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fund Footer -->
+ <button type="button" id="back-to-top" aria-label="Kthehu në fillim">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="js/kontakti.js"></script>
+    <script src="js/navbar-search.js"></script>
+    <script src="js/back-to-top.js"></script>
 </body>
 
 </html>
